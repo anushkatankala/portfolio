@@ -3,13 +3,20 @@ import { motion } from "framer-motion";
 import { SkipBack, SkipForward, Play, Pause } from "lucide-react";
 
 const tracks = [
-  { title: "Midnight City", artist: "M83" },
-  { title: "Electric Feel", artist: "MGMT" },
-  { title: "Digital Love", artist: "Daft Punk" },
-  { title: "Genesis", artist: "Grimes" },
-  { title: "Oblivion", artist: "Grimes" },
-  { title: "Retrograde", artist: "James Blake" },
-  { title: "Intro", artist: "The xx" },
+  { title: "How to Pretend", artist: "Lucy Bedroque" },
+  { title: "5am", artist: "Esdeekid" },
+  { title: "Cel Damage", artist: "KULAPHANTASY, Lucy Bedroque" },
+  { title: "Lover/Friend", artist: "KAYTRANADA, Rochelle Jordan" },
+  { title: "Faded in my Last Song", artist: "NCT U" },
+  { title: "GREENGREENGREEN", artist: "Chase Atlantic" },
+  { title: "Sayso", artist: "Che" },
+  { title: "Princess Going Digital", artist: "Amaarae" },
+  { title: "134340", artist: "BTS" },
+  { title: "ADRENALINE", artist: "Haechan" },
+  { title: "poppop", artist: "NCT WISH" },
+  { title: "Coming Down", artist: "The Weeknd" },
+  { title: "Your Love", artist: "She Wants Revenge" },
+  { title: "Blooming Day", artist: "EXO-CBX" }
 ];
 
 const PlaylistWidget = () => {

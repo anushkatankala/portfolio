@@ -56,10 +56,10 @@ const HeroSection = () => {
 
               <div>
                 <h1 className="font-display text-4xl text-foreground md:text-5xl">
-                  Your Name
+                  anushka tankala
                 </h1>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  cs @ university
+                  cs @ carleton university
                 </p>
               </div>
             </div>
@@ -68,7 +68,8 @@ const HeroSection = () => {
           </div>
 
           <p className="mb-6 font-body text-sm font-light leading-relaxed text-muted-foreground">
-            I build things at the intersection of design and code.
+            a 2nd-year student interested in full stack development, 
+            intrigued by machine learning, and dabbling in design
           </p>
         </motion.div>
       </div>
