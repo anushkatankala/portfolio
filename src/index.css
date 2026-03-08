@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 350 30% 97%;
-    --foreground: 350 10% 12%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 25%;
 
-    --card: 350 25% 95%;
-    --card-foreground: 350 10% 12%;
+    --card: 0 0% 94%;
+    --card-foreground: 0 0% 25%;
 
-    --popover: 350 30% 97%;
-    --popover-foreground: 350 10% 12%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 25%;
 
-    --primary: 350 40% 45%;
-    --primary-foreground: 350 30% 97%;
+    --primary: 0 0% 30%;
+    --primary-foreground: 0 0% 96%;
 
-    --secondary: 350 20% 92%;
-    --secondary-foreground: 350 10% 12%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 0 0% 30%;
 
-    --muted: 350 15% 93%;
-    --muted-foreground: 350 8% 45%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 340 25% 88%;
-    --accent-foreground: 350 10% 12%;
+    --accent: 0 0% 88%;
+    --accent-foreground: 0 0% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 350 15% 89%;
-    --input: 350 15% 89%;
-    --ring: 350 40% 45%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 30%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -46,9 +46,9 @@
     /* Custom tokens */
     --font-display: 'DM Serif Display', serif;
     --font-body: 'DM Sans', sans-serif;
-    --blueprint-line: 350 15% 85%;
-    --playlist-bg: 350 30% 25%;
-    --playlist-fg: 350 20% 92%;
+    --blueprint-line: 0 0% 85%;
+    --playlist-bg: 0 0% 92%;
+    --playlist-fg: 0 0% 35%;
   }
 }
 
