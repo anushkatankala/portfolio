@@ -20,7 +20,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section className="px-6 py-6">
+    <section className="px-6 py-5">
       <div className="mx-auto max-w-2xl">
         <motion.div
           initial={{ opacity: 0 }}
@@ -28,28 +28,25 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="mb-3 flex items-baseline gap-2"
         >
-          <span className="font-mono text-[10px] text-primary/40">01</span>
-          <h2 className="font-display text-xl text-foreground">Previously...</h2>
+          <span className="font-mono text-[9px] text-primary/40">{'>'}</span>
+          <h2 className="font-display text-lg text-foreground">experience.log</h2>
         </motion.div>
 
-        <div className="space-y-0">
+        <div className="space-y-0 border-l border-primary/15 pl-3">
           {experiences.map((exp, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: -5 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="group flex items-center justify-between border-b border-border py-2.5 transition-colors last:border-0 hover:bg-accent/30"
+              className="group flex items-center justify-between py-2 transition-colors"
             >
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-[9px] text-primary/30">{'>'}</span>
-                <div>
-                  <p className="font-body text-sm text-foreground">{exp.company}</p>
-                  <p className="font-body text-xs text-muted-foreground">{exp.role}</p>
-                </div>
+              <div>
+                <p className="font-body text-sm text-foreground">{exp.company}</p>
+                <p className="font-mono text-[10px] text-muted-foreground">{exp.role}</p>
               </div>
-              <p className="font-mono text-[10px] text-muted-foreground">{exp.period}</p>
+              <p className="font-mono text-[9px] text-primary/50">{exp.period}</p>
             </motion.div>
           ))}
         </div>
