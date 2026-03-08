@@ -4,8 +4,38 @@ import PlaylistWidget from "./PlaylistWidget";
 const HeroSection = () => {
   return (
     <section className="relative px-6 pb-4 pt-14 overflow-hidden">
-      <div className="pointer-events-none absolute left-0 top-[35%] h-px w-[40%] bg-primary/5" />
-      <div className="pointer-events-none absolute right-0 top-[55%] h-px w-[25%] bg-primary/5" />
+      {/* ASCII decorations */}
+      <div className="pointer-events-none absolute left-3 top-12 hidden select-none font-mono text-[8px] leading-tight text-primary/10 md:block">
+        <pre>{`  ·  ✦  ·
+ · . * . ·
+✦ . · . ✦
+ · . * . ·
+  ·  ✦  ·`}</pre>
+      </div>
+
+      <div className="pointer-events-none absolute right-4 top-20 hidden select-none font-mono text-[7px] leading-tight text-primary/8 md:block">
+        <pre>{`    *
+   /|\\
+  / | \\
+ /  |  \\
+*---+---*
+ \\  |  /
+  \\ | /
+   \\|/
+    *`}</pre>
+      </div>
+
+      <div className="pointer-events-none absolute left-8 bottom-8 hidden select-none font-mono text-[6px] leading-tight text-primary/8 md:block">
+        <pre>{`· · ✦ · ·
+· ✦ · ✦ ·
+✦ · ✦ · ✦
+· ✦ · ✦ ·
+· · ✦ · ·`}</pre>
+      </div>
+
+      <div className="pointer-events-none absolute right-12 bottom-4 hidden select-none font-mono text-[7px] text-primary/6 md:block">
+        ✧ · ✦ · ✧
+      </div>
 
       <div className="mx-auto max-w-2xl">
         <motion.div
@@ -37,11 +67,9 @@ const HeroSection = () => {
             <PlaylistWidget />
           </div>
 
-          <div className="mb-6 border-l-2 border-primary/20 pl-3">
-            <p className="font-body text-sm font-light leading-relaxed text-muted-foreground">
-              I build things at the intersection of design and code.
-            </p>
-          </div>
+          <p className="mb-6 font-body text-sm font-light leading-relaxed text-muted-foreground">
+            I build things at the intersection of design and code.
+          </p>
         </motion.div>
       </div>
     </section>
