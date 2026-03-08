@@ -22,30 +22,34 @@ const ExperienceSection = () => {
   return (
     <section className="px-6 py-6">
       <div className="mx-auto max-w-2xl">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-3 font-display text-xl text-foreground"
+          className="mb-3 flex items-baseline gap-2"
         >
-          Previously...
-        </motion.h2>
+          <span className="font-mono text-[10px] text-primary/40">01</span>
+          <h2 className="font-display text-xl text-foreground">Previously...</h2>
+        </motion.div>
 
-        <div className="space-y-1.5">
+        <div className="space-y-0">
           {experiences.map((exp, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center justify-between border-b border-border py-2.5 last:border-0"
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="group flex items-center justify-between border-b border-border py-2.5 transition-colors last:border-0 hover:bg-accent/30"
             >
-              <div>
-                <p className="font-body text-sm text-foreground">{exp.company}</p>
-                <p className="font-body text-xs text-muted-foreground">{exp.role}</p>
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-[9px] text-primary/30">{'>'}</span>
+                <div>
+                  <p className="font-body text-sm text-foreground">{exp.company}</p>
+                  <p className="font-body text-xs text-muted-foreground">{exp.role}</p>
+                </div>
               </div>
-              <p className="font-body text-xs text-muted-foreground">{exp.period}</p>
+              <p className="font-mono text-[10px] text-muted-foreground">{exp.period}</p>
             </motion.div>
           ))}
         </div>
