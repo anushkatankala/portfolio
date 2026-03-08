@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { SkipBack, SkipForward, Play, Pause, Music } from "lucide-react";
+import { SkipBack, SkipForward, Play, Pause } from "lucide-react";
 
 const tracks = [
   { title: "Midnight City", artist: "M83" },
@@ -25,38 +25,36 @@ const PlaylistWidget = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.6 }}
-      className="inline-flex items-center gap-3 rounded-lg border border-border bg-playlist px-3 py-2 text-playlist-foreground"
+      transition={{ delay: 0.5, duration: 0.5 }}
+      className="inline-flex items-center gap-2.5 rounded-sm border border-primary/20 bg-playlist px-3 py-1.5 text-playlist-foreground"
     >
-      <Music size={11} className="opacity-40" />
+      <span className="font-mono text-[9px] text-primary/50">♪</span>
 
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.15 }}
         className="min-w-0"
       >
-        <p className="text-xs">{track.title}</p>
-        <p className="text-[10px] opacity-50">{track.artist}</p>
+        <p className="font-mono text-[10px]">{track.title}</p>
+        <p className="font-mono text-[9px] opacity-45">{track.artist}</p>
       </motion.div>
 
       <div className="flex items-center gap-1">
-        <button onClick={prev} className="p-0.5 opacity-40 transition-opacity hover:opacity-80">
-          <SkipBack size={10} />
+        <button onClick={prev} className="p-0.5 text-primary/40 transition-colors hover:text-primary">
+          <SkipBack size={9} />
         </button>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="p-0.5 opacity-40 transition-opacity hover:opacity-80"
+          className="p-0.5 text-primary/40 transition-colors hover:text-primary"
         >
-          {isPlaying ? <Pause size={10} /> : <Play size={10} />}
+          {isPlaying ? <Pause size={9} /> : <Play size={9} />}
         </button>
-        <button onClick={next} className="p-0.5 opacity-40 transition-opacity hover:opacity-80">
-          <SkipForward size={10} />
+        <button onClick={next} className="p-0.5 text-primary/40 transition-colors hover:text-primary">
+          <SkipForward size={9} />
         </button>
       </div>
-
-      <span className="text-[9px] opacity-30">{currentIndex + 1}/{tracks.length}</span>
     </motion.div>
   );
 };

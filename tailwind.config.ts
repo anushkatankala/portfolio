@@ -56,6 +56,7 @@ export default {
           foreground: "hsl(var(--playlist-fg))",
         },
         blueprint: "hsl(var(--blueprint-line))",
+        bsod: "hsl(var(--bsod-blue))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

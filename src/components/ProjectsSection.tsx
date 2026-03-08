@@ -31,14 +31,15 @@ const ProjectsSection = () => {
   return (
     <section className="px-6 py-6">
       <div className="mx-auto max-w-2xl">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-3 font-display text-xl text-foreground"
+          className="mb-3 flex items-baseline gap-2"
         >
-          Projects
-        </motion.h2>
+          <span className="font-mono text-[10px] text-primary/40">02</span>
+          <h2 className="font-display text-xl text-foreground">Projects</h2>
+        </motion.div>
 
         <div className="grid gap-2 sm:grid-cols-2">
           {projects.map((project, i) => (
@@ -48,22 +49,22 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="group cursor-pointer border-b border-border py-3 sm:border-b-0 sm:border-l sm:border-border sm:py-2 sm:pl-3"
+              className="group cursor-pointer rounded-sm border border-border bg-card p-3 transition-all hover:border-primary/30"
             >
-              <div className="flex items-baseline justify-between">
-                <h3 className="font-display text-sm text-foreground">{project.title}</h3>
-                <span className="text-[10px] text-muted-foreground">{project.year}</span>
+              <div className="mb-1 flex items-baseline justify-between">
+                <h3 className="font-body text-sm font-medium text-foreground">{project.title}</h3>
+                <span className="font-mono text-[9px] text-muted-foreground">{project.year}</span>
               </div>
-              <p className="mt-0.5 font-body text-xs font-light text-muted-foreground">
+              <p className="mb-2 font-body text-xs font-light text-muted-foreground">
                 {project.description}
               </p>
-              <div className="mt-1.5 flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-body text-[10px] text-muted-foreground"
+                    className="rounded-sm bg-accent px-1.5 py-0.5 font-mono text-[9px] text-accent-foreground"
                   >
-                    {tag}{" "}
+                    {tag}
                   </span>
                 ))}
               </div>
