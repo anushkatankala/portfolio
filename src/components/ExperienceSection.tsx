@@ -22,15 +22,14 @@ const ExperienceSection = () => {
   return (
     <section className="px-6 py-5">
       <div className="mx-auto max-w-2xl">
-        <motion.div
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-3 flex items-baseline gap-2"
+          className="mb-3 font-display text-lg text-foreground"
         >
-          <span className="font-mono text-[9px] text-primary/40">{'>'}</span>
-          <h2 className="font-display text-lg text-foreground">experience.log</h2>
-        </motion.div>
+          Experience
+        </motion.h2>
 
         <div className="space-y-0 border-l border-primary/15 pl-3">
           {experiences.map((exp, i) => (
@@ -40,7 +39,7 @@ const ExperienceSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="group flex items-center justify-between py-2 transition-colors"
+              className="flex items-center justify-between py-2"
             >
               <div>
                 <p className="font-body text-sm text-foreground">{exp.company}</p>
