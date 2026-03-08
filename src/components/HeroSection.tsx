@@ -3,32 +3,37 @@ import PlaylistWidget from "./PlaylistWidget";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 py-20">
-      {/* Decorative blueprint lines */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/4 top-0 h-full w-px bg-blueprint/40" />
-        <div className="absolute right-1/4 top-0 h-full w-px bg-blueprint/40" />
-        <div className="absolute left-0 top-1/3 h-px w-full bg-blueprint/30" />
+    <section className="relative px-6 pb-6 pt-12">
+      <div className="mx-auto max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-6"
+        >
+          <div className="flex items-start justify-between">
+            <div>
+              <h1 className="mb-1 font-display text-4xl text-foreground md:text-5xl">
+                Your Name
+              </h1>
+              <p className="font-body text-sm text-muted-foreground">
+                Computer Science at University
+              </p>
+            </div>
+            <PlaylistWidget />
+          </div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="font-body text-base font-light leading-relaxed text-muted-foreground"
+        >
+          I'm a software engineer who builds experiences that feel intentional.
+          Currently exploring the intersection of design and code.
+        </motion.p>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 text-center"
-      >
-        <p className="mb-4 font-body text-sm uppercase tracking-[0.3em] text-muted-foreground">
-          Computer Science Student
-        </p>
-        <h1 className="mb-6 font-display text-6xl leading-tight text-foreground md:text-8xl">
-          Your Name
-        </h1>
-        <p className="mx-auto mb-12 max-w-md font-body text-lg font-light leading-relaxed text-muted-foreground">
-          Building things at the intersection of design and code.
-        </p>
-      </motion.div>
-
-      <PlaylistWidget />
     </section>
   );
 };

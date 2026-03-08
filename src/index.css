@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 220 20% 12%;
+    --background: 350 30% 97%;
+    --foreground: 350 10% 12%;
 
-    --card: 40 15% 95%;
-    --card-foreground: 220 20% 12%;
+    --card: 350 25% 95%;
+    --card-foreground: 350 10% 12%;
 
-    --popover: 40 20% 97%;
-    --popover-foreground: 220 20% 12%;
+    --popover: 350 30% 97%;
+    --popover-foreground: 350 10% 12%;
 
-    --primary: 220 25% 18%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 350 40% 45%;
+    --primary-foreground: 350 30% 97%;
 
-    --secondary: 40 10% 90%;
-    --secondary-foreground: 220 20% 12%;
+    --secondary: 350 20% 92%;
+    --secondary-foreground: 350 10% 12%;
 
-    --muted: 40 10% 92%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 350 15% 93%;
+    --muted-foreground: 350 8% 45%;
 
-    --accent: 200 15% 85%;
-    --accent-foreground: 220 20% 12%;
+    --accent: 340 25% 88%;
+    --accent-foreground: 350 10% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 10% 88%;
-    --input: 220 10% 88%;
-    --ring: 220 25% 18%;
+    --border: 350 15% 89%;
+    --input: 350 15% 89%;
+    --ring: 350 40% 45%;
 
     --radius: 0.75rem;
 
@@ -46,9 +46,9 @@
     /* Custom tokens */
     --font-display: 'DM Serif Display', serif;
     --font-body: 'DM Sans', sans-serif;
-    --blueprint-line: 220 15% 82%;
-    --playlist-bg: 220 20% 15%;
-    --playlist-fg: 40 20% 92%;
+    --blueprint-line: 350 15% 85%;
+    --playlist-bg: 350 30% 25%;
+    --playlist-fg: 350 20% 92%;
   }
 }
 

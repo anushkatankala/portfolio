@@ -23,55 +23,38 @@ const PlaylistWidget = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8, duration: 0.6 }}
-      className="inline-flex flex-col items-center gap-3 rounded-2xl bg-playlist px-6 py-5 text-playlist-foreground shadow-lg"
+      transition={{ delay: 0.6, duration: 0.5 }}
+      className="flex items-center gap-3 rounded-xl bg-playlist px-4 py-2.5 text-playlist-foreground shadow-md"
     >
-      <div className="flex items-center gap-2 text-xs uppercase tracking-widest opacity-60">
-        <Music size={12} />
-        <span>now playing</span>
-      </div>
+      <Music size={12} className="opacity-50" />
 
       <motion.div
         key={currentIndex}
-        initial={{ opacity: 0, x: 10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3 }}
-        className="text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+        className="min-w-0"
       >
-        <p className="font-display text-lg">{track.title}</p>
-        <p className="text-sm opacity-60">{track.artist}</p>
+        <p className="truncate text-xs font-medium">{track.title}</p>
+        <p className="truncate text-[10px] opacity-50">{track.artist}</p>
       </motion.div>
 
-      {/* Progress bar (decorative) */}
-      <div className="h-0.5 w-full rounded-full bg-playlist-foreground/20">
-        <motion.div
-          className="h-full rounded-full bg-playlist-foreground/50"
-          initial={{ width: "0%" }}
-          animate={{ width: isPlaying ? "65%" : "30%" }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        />
-      </div>
-
-      <div className="flex items-center gap-4">
-        <button onClick={prev} className="opacity-60 transition-opacity hover:opacity-100">
-          <SkipBack size={16} />
+      <div className="flex items-center gap-1.5">
+        <button onClick={prev} className="opacity-50 transition-opacity hover:opacity-100">
+          <SkipBack size={11} />
         </button>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="rounded-full bg-playlist-foreground/10 p-2 transition-colors hover:bg-playlist-foreground/20"
+          className="rounded-full bg-playlist-foreground/10 p-1 transition-colors hover:bg-playlist-foreground/20"
         >
-          {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+          {isPlaying ? <Pause size={10} /> : <Play size={10} />}
         </button>
-        <button onClick={next} className="opacity-60 transition-opacity hover:opacity-100">
-          <SkipForward size={16} />
+        <button onClick={next} className="opacity-50 transition-opacity hover:opacity-100">
+          <SkipForward size={11} />
         </button>
       </div>
-
-      <p className="text-[10px] opacity-40">
-        {currentIndex + 1} / {tracks.length}
-      </p>
     </motion.div>
   );
 };
