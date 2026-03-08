@@ -4,65 +4,71 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     title: "Project Alpha",
-    description: "A full-stack web application for managing collaborative workflows with real-time updates.",
+    description: "Full-stack web app for collaborative workflows with real-time updates.",
     tags: ["React", "Node.js", "WebSocket"],
+    year: "2025",
   },
   {
     title: "Data Viz Tool",
-    description: "An interactive data visualization dashboard built for exploring complex datasets.",
+    description: "Interactive dashboard for exploring complex datasets.",
     tags: ["D3.js", "Python", "Flask"],
+    year: "2024",
   },
   {
     title: "ML Pipeline",
-    description: "End-to-end machine learning pipeline for text classification with 95% accuracy.",
-    tags: ["PyTorch", "FastAPI", "Docker"],
+    description: "End-to-end ML pipeline for text classification.",
+    tags: ["PyTorch", "FastAPI"],
+    year: "2024",
   },
   {
     title: "Mobile App",
-    description: "A minimal habit tracking app with clean UI and local-first data storage.",
+    description: "Minimal habit tracker with local-first storage.",
     tags: ["React Native", "SQLite"],
+    year: "2024",
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section className="relative px-6 py-24">
-      <div className="mx-auto max-w-3xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+    <section className="px-6 py-8">
+      <div className="mx-auto max-w-2xl">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mb-4 font-display text-2xl text-foreground"
         >
-          <h2 className="mb-2 font-display text-4xl text-foreground">Projects</h2>
-          <div className="mb-12 h-px w-12 bg-foreground/30" />
-        </motion.div>
+          Projects
+        </motion.h2>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2">
           {projects.map((project, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group cursor-pointer rounded-xl border border-border bg-card p-6 transition-all hover:border-foreground/20 hover:shadow-sm"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="group cursor-pointer rounded-lg border border-border bg-card p-4 transition-all hover:border-primary/30 hover:shadow-sm"
             >
-              <div className="mb-3 flex items-start justify-between">
-                <h3 className="font-display text-xl text-card-foreground">{project.title}</h3>
-                <ArrowUpRight
-                  size={16}
-                  className="mt-1 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100"
-                />
+              <div className="mb-1.5 flex items-start justify-between">
+                <h3 className="font-display text-base text-card-foreground">{project.title}</h3>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] text-muted-foreground">{project.year}</span>
+                  <ArrowUpRight
+                    size={12}
+                    className="text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100"
+                  />
+                </div>
               </div>
-              <p className="mb-4 font-body text-sm font-light leading-relaxed text-muted-foreground">
+              <p className="mb-2 font-body text-xs font-light leading-relaxed text-muted-foreground">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground"
+                    className="rounded-full bg-secondary px-2 py-0.5 font-body text-[10px] text-secondary-foreground"
                   >
                     {tag}
                   </span>
