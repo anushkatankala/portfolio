@@ -64,7 +64,10 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <PlaylistWidget />
+            <div className="flex flex-col gap-1">
+              <p className="font-mono text-[8px] text-muted-foreground text-right">some of my favorite songs</p>
+              <PlaylistWidget />
+            </div>
           </div>
 
           <p className="mb-6 font-body text-sm font-light leading-relaxed text-muted-foreground">
