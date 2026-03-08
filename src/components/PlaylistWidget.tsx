@@ -25,36 +25,40 @@ const PlaylistWidget = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.5 }}
-      className="inline-flex items-center gap-2.5 rounded-sm border border-primary/20 bg-playlist px-3 py-1.5 text-playlist-foreground"
+      transition={{ delay: 0.4, duration: 0.4 }}
+      className="inline-flex items-center gap-2 border border-primary/20 px-2.5 py-1.5"
     >
-      <span className="font-mono text-[9px] text-primary/50">♪</span>
+      <span className="font-mono text-[8px] text-primary/40">♫</span>
 
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.15 }}
+        transition={{ duration: 0.12 }}
         className="min-w-0"
       >
-        <p className="font-mono text-[10px]">{track.title}</p>
-        <p className="font-mono text-[9px] opacity-45">{track.artist}</p>
+        <p className="font-mono text-[9px] text-foreground">{track.title}</p>
+        <p className="font-mono text-[8px] text-muted-foreground">{track.artist}</p>
       </motion.div>
 
-      <div className="flex items-center gap-1">
-        <button onClick={prev} className="p-0.5 text-primary/40 transition-colors hover:text-primary">
-          <SkipBack size={9} />
+      <div className="flex items-center gap-0.5">
+        <button onClick={prev} className="p-0.5 text-primary/35 transition-colors hover:text-primary">
+          <SkipBack size={8} />
         </button>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="p-0.5 text-primary/40 transition-colors hover:text-primary"
+          className="p-0.5 text-primary/35 transition-colors hover:text-primary"
         >
-          {isPlaying ? <Pause size={9} /> : <Play size={9} />}
+          {isPlaying ? <Pause size={8} /> : <Play size={8} />}
         </button>
-        <button onClick={next} className="p-0.5 text-primary/40 transition-colors hover:text-primary">
-          <SkipForward size={9} />
+        <button onClick={next} className="p-0.5 text-primary/35 transition-colors hover:text-primary">
+          <SkipForward size={8} />
         </button>
       </div>
+
+      <span className="font-mono text-[7px] text-primary/25">
+        {String(currentIndex + 1).padStart(2, '0')}/{String(tracks.length).padStart(2, '0')}
+      </span>
     </motion.div>
   );
 };
