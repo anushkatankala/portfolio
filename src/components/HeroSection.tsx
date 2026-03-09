@@ -47,11 +47,11 @@ const HeroSection = () => {
             <div className="flex items-center gap-4">
               <div className="relative h-16 w-16 flex-shrink-0">
                 <div className="absolute -inset-1 border border-primary/20" />
-                <div className="flex h-full w-full items-center justify-center border border-primary/30 bg-accent">
-                  <span className="font-mono text-[10px] text-primary/60">
-                    {'>'}_
-                  </span>
-                </div>
+                <img
+                  src="/profile-pic.png"
+                  alt="anushka tankala"
+                  className="h-full w-full object-cover border border-primary/30"
+                />
               </div>
 
               <div>
