@@ -6,19 +6,19 @@ const Footer = () => {
         <div className="flex items-center justify-between">
           <a
             href="mailto:anushkatankala@gmail.com"
-            className="font-mono text-[9px] text-muted-foreground transition-colors hover:text-primary"
+            className="font-mono text-[12px] text-muted-foreground transition-colors hover:text-primary"
           >
             email
           </a>
           <div className="flex gap-3">
-            <a href="https://github.com/anushkatankala" className="font-mono text-[9px] text-muted-foreground transition-colors hover:text-primary">
+            <a href="https://github.com/anushkatankala" className="font-mono text-[12px] text-muted-foreground transition-colors hover:text-primary">
               github
             </a>
-            <a href="https://www.linkedin.com/in/anushka-tankala-0725a52b4" className="font-mono text-[9px] text-muted-foreground transition-colors hover:text-primary">
+            <a href="https://www.linkedin.com/in/anushka-tankala-0725a52b4" className="font-mono text-[12px] text-muted-foreground transition-colors hover:text-primary">
               linkedin
             </a>
-            <a href="https://x.com/anushkatankala" className="font-mono text-[9px] text-muted-foreground transition-colors hover:text-primary">
-              twitter
+            <a href="/anushka_tankala_resume_real.pdf" target="_blank" rel="noopener noreferrer" className="font-mono text-[12px] text-muted-foreground transition-colors hover:text-primary">
+              resume
             </a>
           </div>
         </div>

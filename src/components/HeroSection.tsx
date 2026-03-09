@@ -49,14 +49,14 @@ const HeroSection = () => {
                 <div className="absolute -inset-1 border border-primary/20" />
                 <img
                   src="/profile-pic.png"
-                  alt="anushka tankala"
+                  alt="Anushka Tankala"
                   className="h-full w-full object-cover border border-primary/30"
                 />
               </div>
 
               <div>
                 <h1 className="font-display text-4xl text-foreground md:text-5xl">
-                  anushka tankala
+                  Anushka Tankala
                 </h1>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   cs @ carleton university
@@ -65,15 +65,16 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-              <p className="font-mono text-[8px] text-muted-foreground text-right">some of my favorite songs</p>
+              <p className="font-mono text-[9px] text-muted-foreground text-right">some of my favourite songs</p>
               <PlaylistWidget />
             </div>
           </div>
 
-          <p className="mb-6 font-body text-sm font-light leading-relaxed text-muted-foreground">
-            a 2nd-year student interested in full stack development, 
-            intrigued by machine learning, and dabbling in design
-          </p>
+          <p className="font-body text-sm font-light leading-relaxed text-muted-foreground">
+            Hi there! I'm Anushka, a 2nd-year student that's interested in full stack development, 
+            intrigued by machine learning, and dabbling in design. In my free time, I enjoy reading and learning new things. 
+            Feel free to connect with me on Linkedin and message me!
+           </p>
         </motion.div>
       </div>
     </section>

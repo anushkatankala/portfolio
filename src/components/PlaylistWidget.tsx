@@ -5,7 +5,6 @@ import { SkipBack, SkipForward, Play } from "lucide-react";
 const tracks = [
   { title: "How to Pretend", artist: "Lucy Bedroque" },
   { title: "5am", artist: "Esdeekid" },
-  { title: "Cel Damage", artist: "KULAPHANTASY, Lucy Bedroque" },
   { title: "Lover/Friend", artist: "KAYTRANADA, Rochelle Jordan" },
   { title: "Faded in my Last Song", artist: "NCT U" },
   { title: "GREENGREENGREEN", artist: "Chase Atlantic" },

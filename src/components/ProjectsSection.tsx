@@ -2,29 +2,17 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Project Alpha",
+    title: "Menu4MeNu",
     description: "Full-stack web app for collaborative workflows.",
-    tags: ["React", "Node.js", "WebSocket"],
-    year: "2025",
+    tags: ["React", "Typescript", "Java","SpringBoot", "PostgreSQL", "Tailscale", "Supabase"],
+    year: "2026",
   },
   {
-    title: "Data Viz Tool",
-    description: "Interactive dashboard for complex datasets.",
-    tags: ["D3.js", "Python", "Flask"],
+    title: "Carleton Student Portal Redesign",
+    description: "Full-stack web app for collaborative workflows.",
+    tags: ["HTML", "CSS", "Javascript"],
     year: "2024",
-  },
-  {
-    title: "ML Pipeline",
-    description: "End-to-end ML pipeline for text classification.",
-    tags: ["PyTorch", "FastAPI"],
-    year: "2024",
-  },
-  {
-    title: "Mobile App",
-    description: "Minimal habit tracker with local-first storage.",
-    tags: ["React Native", "SQLite"],
-    year: "2024",
-  },
+  }
 ];
 
 const ProjectsSection = () => {
@@ -55,14 +43,14 @@ const ProjectsSection = () => {
 
               <div className="mb-1 flex items-baseline justify-between">
                 <h3 className="font-body text-sm font-medium text-foreground">{project.title}</h3>
-                <span className="font-mono text-[8px] text-primary/40">{project.year}</span>
+                <span className="font-mono text-[10px] text-primary/60">{project.year}</span>
               </div>
               <p className="mb-2 font-body text-xs font-light text-muted-foreground">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-1">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="font-mono text-[8px] text-primary/50">
+                  <span key={tag} className="font-mono text-[10px] text-primary/70">
                     #{tag}
                   </span>
                 ))}

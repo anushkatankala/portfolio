@@ -4,23 +4,37 @@ import { ChevronDown } from "lucide-react";
 
 const experiences = [
   {
-    role: "Software Engineering Intern",
-    company: "Company Name",
-    period: "Summer 2025",
-    description: "Worked on building scalable microservices and improved API response times by 40%. Collaborated with cross-functional teams to ship features.",
+    company: "Competiton Bureau Canada",
+    role: "Data Engineering Intern",
+    period: "May 2025 - August 2025",
+    description: [
+      "- Engineered a full-stack data visualization platform using AWS Amplify, React, and Typescript", 
+      "- Integrated an agentic chatbot using Amazon Bedrock to support real-time insights within the platform", 
+      "- Developed a data ETL pipeline with AWS Glue and Python (Pandas, Numpy) to automate data processing and analysis"
+    ]
   },
   {
-    role: "Teaching Assistant",
-    company: "University CS Department",
-    period: "2024 – Present",
-    description: "Assisted in teaching data structures and algorithms to 200+ students. Held weekly office hours and graded assignments.",
+    company: "Ignition Hacks 2026",
+    role: "Sponsorship Executive",
+    period: "Feb 2026 - Present",
+    description: ["hi", "hello", "how are you"]
   },
   {
-    role: "Research Assistant",
-    company: "Lab Name",
-    period: "2024",
-    description: "Contributed to research on machine learning applications in healthcare. Built data pipelines and ran experiments.",
+    company: "Carleton South Asian Association",
+    role: "VP External",
+    period: "March 2026 - Present",
+    description: ["hi", "hello", "how are you"]
   },
+  {
+    company: "Carleton Science Student Success Centre",
+    role: "First Year Representative",
+    period: "Oct 2024 - April 2025",
+    description: [
+      "- Communicated student concerns and feedback between first-year students and council leadership", 
+      "- Helped organize events and outreach initiatives to increase student participation", 
+      "- Collaborated with executives, strengthening leadership and communication skills"
+    ]
+  }
 ];
 
 const ExperienceSection = () => {
@@ -35,7 +49,7 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="mb-3 font-display text-lg text-foreground"
         >
-          Experience
+          Experiences
         </motion.h2>
 
         <div className="space-y-0 border-l border-primary/15 pl-3">
@@ -52,8 +66,8 @@ const ExperienceSection = () => {
                 className="flex w-full items-center justify-between py-2 text-left transition-colors hover:bg-accent/30"
               >
                 <div>
-                  <p className="font-body text-sm text-foreground">{exp.company}</p>
-                  <p className="font-mono text-[10px] text-muted-foreground">{exp.role}</p>
+                  <p className="font-body text-sm text-foreground">{exp.role}</p>
+                  <p className="font-mono text-[10px] text-muted-foreground">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <p className="font-mono text-[9px] text-primary/50">{exp.period}</p>
@@ -74,7 +88,9 @@ const ExperienceSection = () => {
                     className="overflow-hidden"
                   >
                     <p className="pb-2 font-body text-xs font-light leading-relaxed text-muted-foreground">
-                      {exp.description}
+                      {exp.description.map((desc, j) => (
+                        <p key={j} className="font-body text-xs font-light leading-relaxed text-muted-foreground">{desc}</p>
+                      ))}
                     </p>
                   </motion.div>
                 )}
