@@ -45,7 +45,7 @@ const HeroSection = () => {
         >
           <div className="mb-5 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="relative h-16 w-16 flex-shrink-0">
+              <div className="relative h-24 w-24 flex-shrink-0">
                 <div className="absolute -inset-1 border border-primary/20" />
                 <img
                   src="/profile-pic.png"
@@ -55,7 +55,7 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <h1 className="font-display text-4xl text-foreground md:text-5xl">
+                <h1 className="font-display text-4xl text-foreground md:text-4xl">
                   Anushka Tankala
                 </h1>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">

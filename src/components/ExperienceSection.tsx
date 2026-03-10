@@ -66,11 +66,11 @@ const ExperienceSection = () => {
                 className="flex w-full items-center justify-between py-2 text-left transition-colors hover:bg-accent/30"
               >
                 <div>
-                  <p className="font-body text-sm text-foreground">{exp.role}</p>
-                  <p className="font-mono text-[10px] text-muted-foreground">{exp.company}</p>
+                  <p className="font-body text-[15px] text-foreground">{exp.role}</p>
+                  <p className="font-mono text-[11px] text-muted-foreground">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <p className="font-mono text-[9px] text-primary/50">{exp.period}</p>
+                  <p className="font-mono text-[10px] text-primary/60">{exp.period}</p>
                   <ChevronDown
                     size={12}
                     className={`text-primary/40 transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""}`}
