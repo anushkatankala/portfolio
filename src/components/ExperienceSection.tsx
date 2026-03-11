@@ -17,13 +17,21 @@ const experiences = [
     company: "Ignition Hacks 2026",
     role: "Sponsorship Executive",
     period: "Feb 2026 - Present",
-    description: ["hi", "hello", "how are you"]
+    description: [
+      "- Identify and connect with potential sponsors to support Ignition Hacks",
+      "- Develop partnerships with companies to strengthen industry involvement in the event",
+      "- Work with the team to organize sponsor collaborations and external engagement"
+    ]
   },
   {
     company: "Carleton South Asian Association",
     role: "VP External",
     period: "March 2026 - Present",
-    description: ["hi", "hello", "how are you"]
+    description: [
+      "- Building relationships with external organizations, sponsors, and community partners",
+      "- Securing sponsorships and collaborations by conducting outreach and coordinating with partner organizations",
+      "- Representing the organization professionally in external communications and managing partnerships"
+    ]
   },
   {
     company: "Carleton Science Student Success Centre",

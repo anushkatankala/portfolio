@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Menu4MeNu",
+    link: "https://devpost.com/software/menu4menu",
     description: "A full-stack meal-planning web app that recommends recipes based on pantry ingredients and helps households organize meals and groceries.",
     tags: ["React", "Typescript", "Java","SpringBoot", "PostgreSQL", "Tailscale", "Supabase"],
     year: "2025",
   },
   {
     title: "Carleton Student Portal Redesign",
+    link: "https://github.com/RaeRae-AFK/Hack-the-Tunnels-2024",
     description: "A humourous yet functional redesign of Carleton’s student portal built to improve usability, navigation, and accessibility.",
     tags: ["HTML", "CSS", "Javascript"],
     year: "2024",
@@ -42,8 +44,16 @@ const ProjectsSection = () => {
               <div className="absolute right-0 top-0 h-2 w-2 border-r border-t border-primary/30" />
 
               <div className="mb-1 flex items-baseline justify-between">
-                <h3 className="font-body text-[15px] font-medium text-foreground">{project.title}</h3>
-                <span className="font-mono text-[10px] text-primary/60">{project.year}</span>
+              <h3 className="font-body text-[15px] font-medium text-foreground">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary hover:underline transition-colors"
+              >
+                {project.title}
+              </a>
+            </h3>                <span className="font-mono text-[10px] text-primary/60">{project.year}</span>
               </div>
               <p className="mb-2 font-body text-xs font-light text-muted-foreground">
                 {project.description}
