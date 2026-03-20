@@ -48,7 +48,7 @@ const HeroSection = () => {
               <div className="relative h-24 w-24 flex-shrink-0">
                 <div className="absolute -inset-1 border border-primary/20" />
                 <img
-                  src="/profile-pic.png"
+                  src="public/profile-pic.png"
                   alt="Anushka Tankala"
                   className="h-full w-full object-cover border border-primary/30"
                 />
